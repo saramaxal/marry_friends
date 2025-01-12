@@ -1,0 +1,17 @@
+.main__photo-show {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+@media (max-width: 940px) {
+    .main__photo-show {
+        gap: 24px;
+    }
+}
+
+@media (max-width: 690px) {
+    .main__photo-show {
+        gap: 20px;
+    }
+}

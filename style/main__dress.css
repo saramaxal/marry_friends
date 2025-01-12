@@ -1,0 +1,75 @@
+.main__dress{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.main__dress__wrap-description-colors{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.main__dress__colors {
+    display: flex;
+    gap: 12px;
+}
+
+.main__dress__colors__color {
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+}
+
+.main__dress__colors__color:nth-child(1){
+    background-color: #707144;
+}
+
+.main__dress__colors__color:nth-child(2){
+    background-color: #C2BA73;
+}
+
+.main__dress__colors__color:nth-child(3){
+    background-color: #F8DCAA;
+}
+
+.main__dress__colors__color:nth-child(4){
+    background-color: #715744;
+}
+.main__dress__wrap-image {
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.main__dress__wrap-image img{
+    width: 256px;
+    height: 320px;
+}
+
+.main__dress__disclaimer {
+    padding-top: 24px;
+}
+
+
+@media (max-width: 940px) {
+    .main__dress__wrap-image img{
+        width: 160px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 690px) {
+    .main__dress__colors__color {
+        width: 40px;
+        height: 40px;
+    }
+    .main__dress__wrap-image img:nth-child(3){
+        display: none;
+    }
+}

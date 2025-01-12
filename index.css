@@ -1,0 +1,15 @@
+@import './style/kurale.css';
+@import './style/normalize.css';
+@import './style/style.css';
+@import './style/header.css';
+@import './style/hero.css';
+@import './style/main__card.css';
+@import './style/info-tanya-and-ilia.css';
+@import './style/main__date-and-place.css';
+@import './style/calendar.css';
+@import './style/main__schedule.css';
+@import './style/main__dress.css';
+@import './style/main__text-disclaimer.css';
+@import './style/main__photo-show.css';
+@import './style/main__questions.css';
+@import './style/footer.css';

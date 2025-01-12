@@ -1,0 +1,80 @@
+.main__schedule {
+    margin-bottom: 50px;
+}
+
+.main__schedule__content-wrap {
+    position: relative;
+}
+.main__schedule__picture {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #211E1A;
+    overflow: hidden;
+}
+
+.main__schedule__picture img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(14px);
+}
+
+.main__schedule__content {
+    position: relative;
+    color: #F4EBD9;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.main__schedule__item {
+    display: flex;
+    gap: 24px;
+}
+
+.main__schedule__item__column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.main__schedule__item__column:first-child {
+    width: 120px;
+    min-width: 120px;
+    align-items: center;
+}
+
+.main__schedule__item__time, .main__schedule__item__title{
+    font-family: 'Kurale', serif;
+    font-size: 36px;
+}
+
+@media (max-width: 940px) {
+
+    .main__schedule__item__time, .main__schedule__item__title{
+        font-size: 24px;
+    }
+
+    .main__schedule__item__description {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 690px) {
+    .main__schedule__item__column:first-child {
+        width: 80px;
+        min-width: 80px;
+    }
+
+    .main__schedule__item__time, .main__schedule__item__title{
+        font-size: 20px;
+    }
+
+    .main__schedule__item__description {
+        font-size: 14px;
+    }
+}
