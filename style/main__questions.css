@@ -3,23 +3,48 @@
     flex-direction: column;
     gap: 32px;
 }
+
 .main__questions__mans {
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    align-items: center;
+    width: 410px;
+    align-self: center;
 }
 
 .main__questions__man {
     display: flex;
     flex-direction: column;
     gap: 24px;
+    border-radius: 4px;
+    padding: 24px;
+}
+
+.main__questions__man-name {
+    font-weight: 600;
 }
 
 .main__questions__man-data {
     display: flex;
     gap: 24px;
     align-items: center;
+}
+
+.main__questions__man:hover {
+    outline: solid #707144;
+}
+
+.main__questions__man:hover .main__questions__man-name{
+    color: #707144;
+}
+
+.link-image:hover svg path {
+    fill: #707144;
+}
+
+.main__questions a:hover{
+    color: #707144;
+    outline: solid #707144;
+    border-radius: 4px;
 }
 
 .main__questions__man-data {
@@ -30,8 +55,18 @@
     .main__questions-show {
         gap: 24px;
     }
-    .main__questions__man, .main__questions__man-data, .main__questions__mans {
+    .main__questions__man, .main__questions__man-data {
         gap: 18px;
+    }
+    .main__questions__mans {
+        gap: 24px;
+        width: 290px;
+    }
+    .main__questions__man {
+        padding: 0px;
+    }
+    .main__questions__man:hover {
+        outline: none;
     }
 }
 
@@ -39,7 +74,11 @@
     .main__questions-show {
         gap: 20px;
     }
-    .main__questions__man, .main__questions__man-data, .main__questions__mans {
+    .main__questions__man, .main__questions__man-data {
         gap: 12px;
+    }
+    .main__questions__mans {
+        gap: 20px;
+        width: 210px;
     }
 }

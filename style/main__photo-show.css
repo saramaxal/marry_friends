@@ -4,6 +4,15 @@
     gap: 32px;
 }
 
+.main__photo-show:not(.disable) .main__photo-show__disable-description{
+    display: none;
+}
+
+.main__photo-show__disable-description {
+    align-self: center;
+    color: #4D4A45;
+}
+
 @media (max-width: 940px) {
     .main__photo-show {
         gap: 24px;

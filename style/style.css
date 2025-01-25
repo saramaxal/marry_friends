@@ -16,7 +16,12 @@ html {
 *::after {
     box-sizing: inherit;
 }
-/* ЗАМЕНИТЬ ШРИФТ НА ROBOTO!!! */
+
+*::selection {
+    background-color: #707144;
+    color: #f4ebd9;
+}
+
 body {
     /* min-width: 320px; */
     min-height: 100vh;
@@ -113,11 +118,23 @@ h3 {
     /* font-weight: 600; */
 }
 
-.button-blue {
+.button.disable {
+    background-color: #E9E3D7;
+}
+
+.button.disable div {
+    color: #4D4A45;
+}
+
+.button.disable svg path {
+    fill: #4D4A45;
+}
+
+.button-blue:not(.disable) {
     background-color: #456F8E;
 }
 
-.button-red {
+.button-red:not(.disable) {
     background-color: #A94B45;
 }
 
