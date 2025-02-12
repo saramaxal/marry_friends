@@ -30,20 +30,19 @@
 }
 
 .main__questions__man:hover {
-    outline: solid #707144;
+    outline: solid #3b412e;
 }
 
 .main__questions__man:hover .main__questions__man-name{
-    color: #707144;
+    color: #3b412e;
 }
 
 .link-image:hover svg path {
-    fill: #707144;
+    fill: #3b412e;
 }
 
 .main__questions a:hover{
-    color: #707144;
-    outline: solid #707144;
+    color: #3b412e;
     border-radius: 4px;
 }
 
