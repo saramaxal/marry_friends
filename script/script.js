@@ -90,7 +90,7 @@ function InitializeMaps() {
 
 function InitializeTimer () {
     let elements = document.querySelectorAll(".timer");
-    let currentTimezoneDifference = (configs.timezone * 60 + new Date().getTimezoneOffset()) * 60;
+    let currentTimezoneDifference = (configs.timezone * 60 + new Date().getTimezoneOffset()) * 60 || 0;
 
     const hrs = { 1: "час", 2: "часа", 3: "часа", 4: "часа", "def": "часов"};
     const dys = { 1: "день", 2: "дня", 3: "дня", 4: "дня", "def": "дней"};
