@@ -5,6 +5,7 @@ function InitializeCalendar() {
     let calendar = document.querySelector(".calendar");
 
     let currentDate = new Date(configs.date.getFullYear(), configs.date.getMonth(), 1);
+    let targetDate = new Date(configs.date.getFullYear(), configs.date.getMonth(), configs.date.getDate());
     currentDate.setDate(currentDate.getDate() - currentDate.getDay() + 1);
 
     let text = '';
@@ -13,11 +14,11 @@ function InitializeCalendar() {
         + configs.days.map(el => `<div class="calendar-cell">${el}</div>`).join("")
         + `</div>\n`;
 
-    while (currentDate < configs.date || currentDate.getMonth() == configs.date.getMonth()) {
+    while (currentDate < targetDate || currentDate.getMonth() == targetDate.getMonth()) {
         text += `<div class="calendar-row">`;
         for (let i = 0; i < 7; i++) {
-            let numberClass = currentDate.getMonth() == configs.date.getMonth() 
-                ? currentDate.getTime() == configs.date.getTime() ? "calendar-cell-active" : ""
+            let numberClass = currentDate.getMonth() == targetDate.getMonth() 
+                ? currentDate.getTime() == targetDate.getTime() ? "calendar-cell-active" : ""
                 : "calendar-cell-gray";
             text += `<div class="calendar-cell ${numberClass}"> ${currentDate.getDate()} </div>`;
 
@@ -87,6 +88,30 @@ function InitializeMaps() {
 }
 
 
+function InitializeTimer () {
+    let elements = document.querySelectorAll(".timer");
+    let currentTimezoneDifference = (configs.timezone * 60 + new Date().getTimezoneOffset()) * 60;
+
+    const hrs = { 1: "час", 2: "часа", 3: "часа", 4: "часа", "def": "часов"};
+    const dys = { 1: "день", 2: "дня", 3: "дня", 4: "дня", "def": "дней"};
+    const getSeconds = (int) => { let n = int % 60; return `${n} сек`; };
+    const getMinutes = (int) => { let n = Math.round(int / 60) % 60; return `${n} мин`; };
+    const getHours = (int) => { 
+        let n = Math.round(int / 3600) % 24; 
+        return `${n} ${ (Math.round(n / 10) % 10 != 1 && hrs[n % 10]) || hrs["def"]}`; 
+    };
+    const getDays = (int) => { 
+        let n = Math.round(int / 3600 / 24); 
+        return `${n} ${(Math.round(n / 10) % 10 != 1 && dys[n % 10]) || dys["def"]}`; 
+    };
+
+    setInterval(() => {
+        let i = Math.round((configs.date - Date.now()) / 1000 - currentTimezoneDifference);
+        elements.forEach(el => el.innerHTML = `${getDays(i)} ${getHours(i)} ${getMinutes(i)} ${getSeconds(i)}`);
+    }, 200);
+}
+
+
 function test() {
     let delElement = document.querySelector(".main__info-content__photo:first-child img");
     let main = document.querySelector("main");
@@ -107,4 +132,5 @@ InitializeCalendar();
 InitializeShedule();
 InitializeLinks();
 InitializeMaps();
+InitializeTimer();
 test();
