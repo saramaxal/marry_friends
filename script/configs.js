@@ -1,5 +1,6 @@
 export const configs = {
-    date: new Date(2025, 7, 10),
+    date: new Date(2025, 7, 10, 10, 30),
+    timezone: +3,
     days: ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'],
 
 
