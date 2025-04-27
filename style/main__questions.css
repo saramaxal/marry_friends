@@ -7,16 +7,14 @@
 .main__questions__mans {
     display: flex;
     flex-direction: column;
-    width: 410px;
-    align-self: center;
+    gap: 32px;
 }
 
 .main__questions__man {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 18px;
     border-radius: 4px;
-    padding: 24px;
 }
 
 .main__questions__man-name {
@@ -25,12 +23,8 @@
 
 .main__questions__man-data {
     display: flex;
-    gap: 24px;
+    gap: 18px;
     align-items: center;
-}
-
-.main__questions__man:hover {
-    outline: solid #3b412e;
 }
 
 .main__questions__man:hover .main__questions__man-name{
@@ -59,7 +53,6 @@
     }
     .main__questions__mans {
         gap: 24px;
-        width: 290px;
     }
     .main__questions__man {
         padding: 0px;
@@ -78,6 +71,5 @@
     }
     .main__questions__mans {
         gap: 20px;
-        width: 210px;
     }
 }
