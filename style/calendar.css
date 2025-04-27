@@ -34,7 +34,7 @@
 }
 
 .calendar-cell-active::after {
-    content: '10:30';
+    content: '11:30';
     position: absolute;
     line-height: normal;
     color: #322222;
